@@ -1,0 +1,13 @@
+{
+    "name": "app",
+    "private": true,
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "http-proxy": "^1.18.1"
+    },
+    "engines": {
+        "node": ">=18"
+    }
+}

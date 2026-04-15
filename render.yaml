@@ -1,0 +1,7 @@
+services:
+  - type: web
+    runtime: docker
+    name: proxy
+    envVars:
+      - key: PORT
+        value: "3000"
