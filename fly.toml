@@ -1,14 +1,18 @@
-app = "CHANGE-ME"
+app = "edu"
+primary_region = "dfw"
 
 [build]
   dockerfile = "Dockerfile"
 
 [http_service]
-  internal_port = 3000
-  force_https = true
-  auto_stop_machines = true
   auto_start_machines = true
+  auto_stop_machines = true
+  force_https = true
+  internal_port = 3000
+  min_machines_running = 1
+  processes = ["app"]
 
 [[vm]]
-  size = "shared-cpu-1x"
-  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
